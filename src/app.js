@@ -4,9 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   new Vue({
     el: "#app",
     data: {
-      countries: [
-
-      ],
+      styleFlag: {
+        width: '200px',
+        height: 'auto'
+      },
+      countries: [],
+      selectedCountry: null
     },
     mounted() {
       this.fetchCountries();

@@ -7,7 +7,14 @@
   </head>
   <body>
     <div id="app">
-      <h3>{{totalPopulation}}</h3>
+      <h3>Total Population: {{totalPopulation}}</h3>
+      <div id="countries-list">
+        <select v-model="selectedCountry" class="" name="">
+          <option v-for="country in countries" :value="country" >{{country.name}}</option>
+        </select>
+        <br>
+        <img v-bind:style="styleFlag" v-if="selectedCountry" :src="selectedCountry.flag" alt="">
+      </div>
     </div>
   </body>
 </html>
